@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
-class Events extends StatefulWidget {
-  const Events({super.key});
+class Orgassign extends StatefulWidget {
+  const Orgassign({super.key});
 
   @override
-  State<Events> createState() => _EventsState();
+  State<Orgassign> createState() => _OrgassignState();
 }
 
-class _EventsState extends State<Events> {
+class _OrgassignState extends State<Orgassign> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
+       body: Column(
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -23,15 +22,7 @@ class _EventsState extends State<Events> {
               ),
             ],
           ),
-          Center(
-            child: Padding(
-              padding: const EdgeInsets.only(top: 5, bottom: 10),
-              child: Text(
-                'Events',
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-              ),
-            ),
-          ),
+         
           Expanded(
             child: ListView.builder(
               itemCount: 1,
@@ -45,7 +36,7 @@ class _EventsState extends State<Events> {
                       title: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Center(child: Text('Mohiniyattam')),
+                          Center(child: Text('Margamkali')),
                           Icon(Icons.delete),
                         ],
                       ),
@@ -64,13 +55,6 @@ class _EventsState extends State<Events> {
             ),
           ),
         ],
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-         
-        },
-        child: Icon(Icons.add),
-        backgroundColor: Color.fromARGB(255, 252, 147, 62),
       ),
     );
   }

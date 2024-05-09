@@ -14,6 +14,7 @@ class _AssignState extends State<Assign> {
       body: Padding(
         padding: const EdgeInsets.only(top: 10),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Center(
               child: Text(
@@ -28,6 +29,23 @@ class _AssignState extends State<Assign> {
             _buildAssignmentRow('Kathakali'),
             SizedBox(height: 10), 
             _buildAssignmentRow('Kolkali'),
+            Spacer(),
+            Center(
+              child: ElevatedButton(
+                onPressed: () {
+                  
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Color.fromARGB(255, 45, 55, 112),
+                  padding: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+                ),
+                child: Text(
+                  'Assign',
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
+            ),
+            SizedBox(height: 20), 
           ],
         ),
       ),
@@ -38,7 +56,7 @@ class _AssignState extends State<Assign> {
     return Row(
       children: [
         Padding(
-          padding: const EdgeInsets.only(right: 20,left: 20),
+          padding: const EdgeInsets.only(right: 20, left: 20),
           child: Container(
             width: 20, 
             height: 20,
@@ -61,8 +79,5 @@ class _AssignState extends State<Assign> {
             ),
           ),
         ),
-        
-      ],
-    );
-  }
-}
+      ]);
+  }}
