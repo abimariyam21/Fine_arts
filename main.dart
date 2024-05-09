@@ -8,7 +8,10 @@ import 'package:flutter_application_1/Admin/Orgassign.dart';
 import 'package:flutter_application_1/Admin/Studentdetails.dart';
 import 'package:flutter_application_1/Admin/students.dart';
 import 'package:flutter_application_1/Login.dart';
+import 'package:flutter_application_1/Organizer/Appealdetails.dart';
 import 'package:flutter_application_1/Organizer/Editevents.dart';
+import 'package:flutter_application_1/Organizer/Organiserassg.dart';
+import 'package:flutter_application_1/Organizer/Orgevtpart.dart';
 import 'package:flutter_application_1/Organizer/Orglogin.dart';
 import 'package:flutter_application_1/Organizer/Registrationorg.dart';
 
@@ -29,7 +32,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:Editevents(),
+      home:Appealdetails(),
     );
   }
 }

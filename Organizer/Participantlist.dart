@@ -8,6 +8,13 @@ class Participantlist extends StatefulWidget {
 }
 
 class _ParticipantlistState extends State<Participantlist> {
+   int _currentIndex = 0; 
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _currentIndex = index;
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,17 +49,8 @@ class _ParticipantlistState extends State<Participantlist> {
                     padding: const EdgeInsets.only(bottom: 8),
                     child: ListTile(
                       title: Text('Name'),
-                      subtitle: Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text('Id number'),
-                            ],
-                          ),
-                        ],
-                      ),
+                      subtitle: Text('Id number'),
+                      leading: Icon(Icons.person),
                     ),
                   ),
                 );

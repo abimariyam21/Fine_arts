@@ -42,17 +42,8 @@ class _OrganizorState extends State<Organizor> {
                     padding: const EdgeInsets.only(bottom: 8),
                     child: ListTile(
                       title: Text('Name'),
-                      subtitle: Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text('Id number'),
-                            ],
-                          ),
-                        ],
-                      ),
+                      subtitle: Text('Id number'),
+                      leading: Icon(Icons.person),
                     ),
                   ),
                 );

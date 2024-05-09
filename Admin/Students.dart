@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Admin/Organizor.dart';
 
 class Students extends StatefulWidget {
-  const Students({super.key});
+  const Students({Key? key}) : super(key: key);
 
   @override
   State<Students> createState() => _StudentsState();
@@ -10,17 +9,13 @@ class Students extends StatefulWidget {
 
 class _StudentsState extends State<Students> {
   int _currentIndex = 0; 
-static const List<dynamic> _widgetoptions = [
-    Students(),
-    Organizor(),
-     
-  ];
 
   void _onItemTapped(int index) {
     setState(() {
       _currentIndex = index;
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -75,12 +70,12 @@ static const List<dynamic> _widgetoptions = [
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _currentIndex, 
+        backgroundColor: Color.fromRGBO(40, 46, 117, 1), 
+        selectedItemColor: Colors.white, 
+        unselectedItemColor: Colors.grey, 
+        currentIndex: _currentIndex,
         onTap: (index) {
-          setState(() {
-            _currentIndex = index;
-          });
-          _onBottomNavTap(index); 
+          _onItemTapped(index);
         },
         items: [
           BottomNavigationBarItem(
@@ -103,13 +98,13 @@ static const List<dynamic> _widgetoptions = [
   void _onBottomNavTap(int index) {
     switch (index) {
       case 0:
-        // Handle the "List" option
+        
         break;
       case 1:
-        // Handle the "Add" option
+        
         break;
       case 2:
-        // Handle the "Settings" option
+        
         break;
     }
   }

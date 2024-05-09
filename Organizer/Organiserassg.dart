@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 
-class Orgassign extends StatefulWidget {
-  const Orgassign({super.key});
+class Orgassig extends StatefulWidget {
+  const Orgassig({Key? key}) : super(key: key);
 
   @override
-  State<Orgassign> createState() => _OrgassignState();
+  State<Orgassig> createState() => _OrgassigState();
 }
 
-class _OrgassignState extends State<Orgassign> {
+class _OrgassigState extends State<Orgassig> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       body: Column(
+      body: Column(
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -22,7 +22,6 @@ class _OrgassignState extends State<Orgassign> {
               ),
             ],
           ),
-         
           Expanded(
             child: ListView.builder(
               itemCount: 1,
@@ -36,8 +35,14 @@ class _OrgassignState extends State<Orgassign> {
                       title: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Center(child: Text('Margamkali')),
-                          Icon(Icons.delete),
+                          Text('Margamkali'), 
+                          Column( 
+                            children: [
+                              Icon(Icons.delete),
+                              SizedBox(height: 15), 
+                              Icon(Icons.edit_document),
+                            ],
+                          ),
                         ],
                       ),
                       subtitle: Column(
