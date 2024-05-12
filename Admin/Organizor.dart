@@ -11,46 +11,128 @@ class _OrganizorState extends State<Organizor> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Organizer Deatil'),
+        centerTitle: true,
+      ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          Center(
+           child: Container(
+            height: 100,
+                    width: 100,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        border: Border.all(color: Colors.black),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child:
+                         Icon(Icons.person),
+                      ),
+                    ),
+                    
+         ),
+         Center(child: Text('Name')),
+         Padding(padding: EdgeInsets.all(10)),
           Row(
-            mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 80),
-                child: Icon(Icons.arrow_back_ios),
-              ),
+              Text('Id Number'),
             ],
           ),
-          Center(
-            child: Padding(
-              padding: const EdgeInsets.only(top: 5, bottom: 10),
-              child: Text(
-                'Organizor List',
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          Container(
+            height: 30,
+            width: 500,
+            decoration: BoxDecoration(
+              shape: BoxShape.rectangle,
+              border: Border.all(),
+              borderRadius: BorderRadius.circular(2),
+              
+            ),
+            child:Text('0000',style: TextStyle(color: Colors.grey)),
+          ),
+           Row(
+            children: [
+              Text('Phone Number'),
+            ],
+          ),
+          Container(
+            height: 30,
+            width: 500,
+            decoration: BoxDecoration(
+              shape: BoxShape.rectangle,
+              border: Border.all(),
+              borderRadius: BorderRadius.circular(2),
+              
+            ),
+            child:Text('92736484647',style: TextStyle(color: Colors.grey)),
+          ),
+          Row(
+                children: [
+                  Text('Description'),
+                ],
               ),
+             Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: TextFormField(
+              maxLines: null,
+              decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  
+                  hintText: ('Description')),
             ),
           ),
-          Expanded(
-            child: ListView.builder(
-              itemCount: 4,
-              itemBuilder: (context, index) {
-                return Card(
-                  elevation: 3,
-                  color: Color.fromARGB(255, 244, 246, 248),
-                  child: Padding(
-                    padding: const EdgeInsets.only(bottom: 8),
-                    child: ListTile(
-                      title: Text('Name'),
-                      subtitle: Text('Id number'),
-                      leading: Icon(Icons.person),
-                    ),
-                  ),
-                );
-              },
-            ),
-          ),
-    ]));
-  
+          Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+          
+           
+            ElevatedButton(
+  onPressed: () {
+   
+  },
+  style: ButtonStyle(
+    foregroundColor: MaterialStateProperty.all<Color>(Colors.white), 
+    backgroundColor: MaterialStateProperty.all<Color>(Color.fromARGB(255, 6, 129, 32)), 
+    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+      RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(8.0), 
+      ),
+
+    ),
+  ),
+  child: Text('Accept'),
+),
+SizedBox(width: 50,),
+
+ ElevatedButton(
+  onPressed: () {
+   
+  },
+  style: ButtonStyle(
+    foregroundColor: MaterialStateProperty.all<Color>(Colors.white), 
+    backgroundColor: MaterialStateProperty.all<Color>(Color.fromARGB(255, 212, 37, 6)), 
+    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+      RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(8.0), 
+      ),
+
+
+    ),
+  ),
+  child: Text('Reject'),
+)
+
+
+          
+          ],
+        )
+          
+        ],
+        
+      )
+
+    );
   }
 }

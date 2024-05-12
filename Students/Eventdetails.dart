@@ -1,85 +1,92 @@
 import 'package:flutter/material.dart';
 
-class Eventdetails extends StatefulWidget {
-  const Eventdetails({super.key});
+class stdEventDetail extends StatefulWidget {
+  const stdEventDetail({super.key});
 
   @override
-  State<Eventdetails> createState() => _EventdetailsState();
+  State<stdEventDetail> createState() => _stdEventDetailState();
 }
 
-class _EventdetailsState extends State<Eventdetails> {
+class _stdEventDetailState extends State<stdEventDetail> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       body: Padding(
-        padding: const EdgeInsets.only(top: 10),
-        child: Column(
-          children: [
-            Center(
-              child: Text('Event details',
-              style:TextStyle(
-                fontSize: 15,
-                fontWeight: FontWeight.bold,
-              )),
-            ),
-            Container(
-              height: 150,
-              width: 80,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                border:Border.all(color: Colors.black),
-              ),
-child: Center(child: Icon(Icons.person),
+      appBar: AppBar(
+        title: Text('Event Deatil',style: TextStyle(fontWeight: FontWeight.bold),),
+        centerTitle: true,
+      ),
+     body: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+         Center(
+           child: Container(
+            height: 100,
+                    width: 100,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        border: Border.all(color: Colors.black),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child:
+                         Icon(Icons.person),
+                      ),
                     ),
                     
-                    
-            ),
-            Center(child: Padding(
-              padding: const EdgeInsets.only(bottom: 10),
-              child: Text('Mohiniyattam'),
-            )),
+         ),
+         Center(child: Text('Mohiniyattam')),
+         Padding(padding: EdgeInsets.all(10)),
 
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text('Date:  '),
-                 Text('   00000',style: TextStyle(color: Colors.grey),)
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text('Stage:  '),
-                 Text('   00000',style: TextStyle(color: Colors.grey),)
-              ],
-            ), Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text('Time:  '),
-                 Text('   00000',style: TextStyle(color: Colors.grey),)
-              ],
-            ), Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text('Location:  '),
-                 Text('   00000',style: TextStyle(color: Colors.grey),)
-              ],
-            ),
-             Padding(
-                   padding: const EdgeInsets.only(top: 50,left:20),
-                   child: Center(
-                     child: Container(
-                      width: 100,
-                      height: 40,
-                      decoration: BoxDecoration(
-                        color:Color(0xFF204563),
-                     border: Border.all(),
-                     borderRadius: BorderRadius.circular(5),
-                      ),
-                        child: Center(child: Text('Submit',style: TextStyle(color: Colors.white),))),
-                   ),
-                 ),
-    ])
-    ));
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('Date:'),
+            Text('17/03/2000',style: TextStyle(color: Colors.grey),)
+          ],
+        ),
+        Padding(padding: EdgeInsets.all(8)),
+
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('Stage No:'),
+            Text('02',style: TextStyle(color: Colors.grey),)
+          ],
+        ),
+        Padding(padding: EdgeInsets.all(8)),
+
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('Time:'),
+            Text('9:00',style: TextStyle(color: Colors.grey),)
+          ],
+        ),
+        Padding(padding: EdgeInsets.all(8)),
+
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('Location:'),
+            Text('College',style: TextStyle(color: Colors.grey),)
+          ],
+        ),
+      Padding(
+              padding: const EdgeInsets.all(20),
+              child: Container(
+                width: 200,
+                height: 30,
+                decoration: BoxDecoration(
+                  color: Color(0xFF204563),
+                  border: Border.all(),
+                  borderRadius: BorderRadius.circular(5),
+                ),
+                child: Center(child: Text('Apply',style: TextStyle(color: const Color.fromARGB(255, 244, 244, 244)),)),
+                ),
+                ),
+        
+      ],
+     ),
+    );
   }
 }

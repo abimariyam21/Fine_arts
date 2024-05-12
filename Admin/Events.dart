@@ -12,65 +12,50 @@ class _EventsState extends State<Events> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 80),
-                child: Icon(Icons.arrow_back_ios),
-              ),
-            ],
-          ),
-          Center(
-            child: Padding(
-              padding: const EdgeInsets.only(top: 5, bottom: 10),
-              child: Text(
-                'Events',
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-              ),
-            ),
-          ),
-          Expanded(
-            child: ListView.builder(
-              itemCount: 1,
+     appBar: AppBar(
+        title: Text('Event List'),
+         centerTitle: true,
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+           
+            ListView.builder(
+              shrinkWrap: true, 
+              itemCount: 5,
               itemBuilder: (context, index) {
-                return Card(
-                  elevation: 1,
-                  color: Color.fromARGB(255, 244, 246, 248),
-                  child: Padding(
-                    padding: const EdgeInsets.all(8),
-                    child: ListTile(
-                      title: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Center(child: Text('Mohiniyattam')),
-                          Icon(Icons.delete),
-                        ],
-                      ),
-                      subtitle: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text('Date: 1/11/1111'),
-                          Text('Time: 01:00'),
-                          Text('Stage: 3'),
-                        ],
-                      ),
+                return Container(
+                  decoration: BoxDecoration(color: Color(0xFF558DBB),border: Border.all(
+                    color: Colors.black12
+                  ),borderRadius: BorderRadius.circular(5)
+                  ),
+                  child: ListTile(
+                  
+                    title: Text('Mohiniyattam'),
+                    subtitle: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [Text('Time:10:00'),
+                      Text('Stage:3')],
                     ),
+                    trailing: Icon(Icons.delete),
+                   
                   ),
                 );
-              },
+                 
+              }
+                
+            
             ),
-          ),
-        ],
+            
+            
+          ],
+          
+        ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () { 
-         
-        },
-        child: Icon(Icons.add),
-        backgroundColor: Color.fromARGB(255, 252, 147, 62),
+      floatingActionButton: FloatingActionButton(onPressed: (){},
+      child: Icon(Icons.add),
+      backgroundColor: Colors.amber,
       ),
     );
   }

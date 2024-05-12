@@ -14,92 +14,115 @@ class _StddetailsState extends State<Stddetails> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.only(top: 10),
-        child: Column(
-          children: [
-            Center(
-              child: Text('Student details',
-              style:TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              )),
-            ),
-            Container(
-              height: 150,
-              width: 80,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                border:Border.all(color: Colors.black),
-              ),
-child: Center(child: Icon(Icons.person),
+     appBar: AppBar(
+        title: Text('Student Deatil'),
+        centerTitle: true,
+      ),
+     body: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+         Center(
+           child: Container(
+            height: 100,
+                    width: 100,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        border: Border.all(color: Colors.black),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child:
+                         Icon(Icons.person),
+                      ),
                     ),
                     
-                    
-            ),
-            Center(child: Text('Name')),
+         ),
+         Center(child: Text('Name')),
+         Padding(padding: EdgeInsets.all(10)),
 
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text('ID Number:  '),
-                 Text('   00000',style: TextStyle(color: Colors.grey),)
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text('Department:  '),
-                 Text('   00000',style: TextStyle(color: Colors.grey),)
-              ],
-            ), Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text('Phone Number:  '),
-                 Text('   00000',style: TextStyle(color: Colors.grey),)
-              ],
-            ), Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text('Location:  '),
-                 Text('   00000',style: TextStyle(color: Colors.grey),)
-              ],
-            ),
-Row(
-  mainAxisAlignment: MainAxisAlignment.center,
-  children: [
-  Padding(
-    padding: const EdgeInsets.only(top:10,right: 8),
-    child: Container(
-               
-                decoration: BoxDecoration(
-                  shape: BoxShape.rectangle,
-                 color: Colors.green,
-                ),
-                child: Text('Accept'),
-    ),
-  ),
-   Padding(
-    padding: const EdgeInsets.only(top: 10,left: 8),
-    child: Container(
-               
-                decoration: BoxDecoration(
-                  shape: BoxShape.rectangle,
-                  color: Colors.red,
-                  
-                ),
-                child: Text('Reject'),
-    ),
-  ),
-  ]
-)
-            
-                ],
-            )
-          
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('Id Number:'),
+            Text('00000',style: TextStyle(color: Colors.grey),)
+          ],
         ),
-      );
+        Padding(padding: EdgeInsets.all(8)),
+
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('Department:'),
+            Text('Computer Science',style: TextStyle(color: Colors.grey),)
+          ],
+        ),
+        Padding(padding: EdgeInsets.all(8)),
+
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('Phone Number:'),
+            Text('College',style: TextStyle(color: Colors.grey),)
+          ],
+        ),
+        Padding(padding: EdgeInsets.all(8)),
+
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('Location:'),
+            Text('College',style: TextStyle(color: Colors.grey),)
+          ],
+        ),
       
-  
+          Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+          
+           
+            ElevatedButton(
+  onPressed: () {
+   
+  },
+  style: ButtonStyle(
+    foregroundColor: MaterialStateProperty.all<Color>(Colors.white), 
+    backgroundColor: MaterialStateProperty.all<Color>(Color.fromARGB(255, 6, 129, 32)), 
+    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+      RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(8.0), 
+      ),
+
+    ),
+  ),
+  child: Text('Accept'),
+),
+SizedBox(width: 50,),
+
+ ElevatedButton(
+  onPressed: () {
+   
+  },
+  style: ButtonStyle(
+    foregroundColor: MaterialStateProperty.all<Color>(Colors.white), 
+    backgroundColor: MaterialStateProperty.all<Color>(Color.fromARGB(255, 212, 37, 6)), 
+    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+      RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(8.0), 
+      ),
+
+
+    ),
+  ),
+  child: Text('Reject'),
+)
+
+
+          
+          ],
+        )
+        
+      ],
+     ),
+    );
   }
 }

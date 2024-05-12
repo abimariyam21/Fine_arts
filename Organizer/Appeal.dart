@@ -1,26 +1,18 @@
 import 'package:flutter/material.dart';
 
-class Students extends StatefulWidget {
-  const Students({Key? key}) : super(key: key);
+class Appeal extends StatefulWidget {
+  const Appeal({super.key});
 
   @override
-  State<Students> createState() => _StudentsState();
+  State<Appeal> createState() => _AppealState();
 }
 
-class _StudentsState extends State<Students> {
-  int _currentIndex = 0; 
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _currentIndex = index;
-    });
-  }
-
+class _AppealState extends State<Appeal> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Student List'),
+    appBar: AppBar(
+        title: Text('Appeal'),
          centerTitle: true,
       ),
       body: SingleChildScrollView(
@@ -30,7 +22,7 @@ class _StudentsState extends State<Students> {
            
             ListView.builder(
               shrinkWrap: true, 
-              itemCount: 5,
+              itemCount: 2,
               itemBuilder: (context, index) {
                 return Container(
                   
@@ -40,18 +32,21 @@ class _StudentsState extends State<Students> {
                   ),
                   child: ListTile(
                   
-                    title: Text('Name '),
-                    subtitle: Text('Id Number '),
-                    leading: Icon(Icons.person),
+                    title: Text('Mohiniyattam'),
+                    
+                    leading: Icon(Icons.image_outlined),
+                    
                    
                   ),
                 );
               },
             
             ),
+            
           ],
         ),
       ),
     );
   }
 }
+  

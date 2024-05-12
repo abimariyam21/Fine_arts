@@ -11,73 +11,99 @@ class _AssignState extends State<Assign> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.only(top: 10),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Center(
-              child: Text(
-                'Assign',
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-            SizedBox(height: 30), 
-            _buildAssignmentRow('Kathakali'),
-            SizedBox(height: 10), 
-            _buildAssignmentRow('Kolkali'),
-            Spacer(),
-            Center(
-              child: ElevatedButton(
-                onPressed: () {
-                  
-                },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Color.fromARGB(255, 45, 55, 112),
-                  padding: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
-                ),
-                child: Text(
-                  'Assign',
-                  style: TextStyle(color: Colors.white),
-                ),
-              ),
-            ),
-            SizedBox(height: 20), 
-          ],
-        ),
+      appBar: AppBar(
+         title: Text('Assign'),
+        centerTitle: true,
+      ),
+      body: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+               Padding(
+                 padding: const EdgeInsets.all(10),
+                 child: Container(
+                      height: 30,
+                      width: 30,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.rectangle,
+                        border: Border.all(),
+                        borderRadius: BorderRadius.circular(2),
+                        
+                        
+                      ),),
+               ),
+              Container(
+                    height: 30,
+                    width: 200,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.rectangle,
+                      border: Border.all(),
+                      borderRadius: BorderRadius.circular(2),
+                      color: Color(0xFF558DBB),
+                      
+                    ),
+                    child:Center(child:
+                    Text('Kathakali',style: TextStyle(color: Colors.white),)),
+                  ),
+
+                 
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+               Padding(
+                 padding: const EdgeInsets.all(10),
+                 child: Container(
+                      height: 30,
+                      width: 30,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.rectangle,
+                        border: Border.all(),
+                        borderRadius: BorderRadius.circular(5),
+                        
+                        
+                      ),),
+               ),
+              Container(
+                    height: 30,
+                    width: 200,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.rectangle,
+                      border: Border.all(),
+                      borderRadius: BorderRadius.circular(5),
+                      color: Color(0xFF558DBB),
+                      
+                    ),
+                    child:Center(child:
+                    Text('Mohiniyattam',style: TextStyle(color: Colors.white),)),
+                  ),                
+            ],
+          ),
+           Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+             children: [
+               Container(
+                  width: 200,
+                  height: 30,
+                  decoration: BoxDecoration(
+                      color: Color(0xFF204563),
+                      border: Border.all(),
+                      borderRadius: BorderRadius.circular(5)),
+                  child: Center(
+                    child: Text(
+                      'Submit',
+                      style: TextStyle(
+                          color: const Color.fromARGB(255, 240, 240, 240)),
+                    ),
+                  )),
+             ],
+           )
+
+             
+        ],
       ),
     );
   }
-
-  Widget _buildAssignmentRow(String text) {
-    return Row(
-      children: [
-        Padding(
-          padding: const EdgeInsets.only(right: 20, left: 20),
-          child: Container(
-            width: 20, 
-            height: 20,
-            color: Color.fromARGB(255, 211, 207, 207), 
-          ),
-        ),
-        SizedBox(width: 10), 
-        Container(
-          width: 200, 
-          height: 50, 
-          decoration: BoxDecoration(
-            color: Color(0xFF204563), 
-            border: Border.all(),
-            borderRadius: BorderRadius.circular(5),
-          ),
-          child: Center(
-            child: Text(
-              text, 
-              style: TextStyle(color: Colors.white),
-            ),
-          ),
-        ),
-      ]);
-  }}
+}

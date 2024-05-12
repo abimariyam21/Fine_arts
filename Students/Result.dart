@@ -1,26 +1,18 @@
 import 'package:flutter/material.dart';
 
-class Students extends StatefulWidget {
-  const Students({Key? key}) : super(key: key);
+class stdResult extends StatefulWidget {
+  const stdResult({super.key});
 
   @override
-  State<Students> createState() => _StudentsState();
+  State<stdResult> createState() => _stdResultState();
 }
 
-class _StudentsState extends State<Students> {
-  int _currentIndex = 0; 
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _currentIndex = index;
-    });
-  }
-
+class _stdResultState extends State<stdResult> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Student List'),
+        title: Text('Result',style: TextStyle(fontWeight: FontWeight.bold),),
          centerTitle: true,
       ),
       body: SingleChildScrollView(
@@ -30,25 +22,27 @@ class _StudentsState extends State<Students> {
            
             ListView.builder(
               shrinkWrap: true, 
-              itemCount: 5,
+              itemCount: 2,
               itemBuilder: (context, index) {
                 return Container(
                   
                   decoration: BoxDecoration(color: Color.fromARGB(255, 247, 247, 247),border: Border.all(
-                    color: Colors.black12
+                    color: Color.fromARGB(31, 28, 111, 235)
                   ),borderRadius: BorderRadius.circular(5)
                   ),
                   child: ListTile(
                   
-                    title: Text('Name '),
-                    subtitle: Text('Id Number '),
-                    leading: Icon(Icons.person),
+                    title: Text('Oppana'),
+                    
+                    leading: Icon(Icons.image_outlined),
+                    
                    
                   ),
                 );
               },
             
             ),
+            
           ],
         ),
       ),

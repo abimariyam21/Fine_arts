@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Orgassig extends StatefulWidget {
-  const Orgassig({Key? key}) : super(key: key);
+class Orgassign extends StatefulWidget {
+  const Orgassign({super.key});
 
   @override
-  State<Orgassig> createState() => _OrgassigState();
+  State<Orgassign> createState() => _OrgassignState();
 }
 
-class _OrgassigState extends State<Orgassig> {
+class _OrgassignState extends State<Orgassign> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
