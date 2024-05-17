@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Organizer/Orgnav.dart';
 
 class Orglogin extends StatefulWidget {
   const Orglogin({super.key});
@@ -62,15 +63,20 @@ Padding(
                  
                  Padding(
                    padding: const EdgeInsets.only(top: 30),
-                   child: Container(
-                    width: 200,
-                    height: 50,
-                    decoration: BoxDecoration(
-                      color:Color(0xFF204563),
-                   border: Border.all(),
-                   borderRadius: BorderRadius.circular(5),
-                    ),
-                      child: Center(child: Text('Login',style: TextStyle(color: Colors.white),))),
+                   child: InkWell(onTap:() {
+                     Navigator.push(context, MaterialPageRoute(builder: (context){return organizernav();
+                     }));
+                   },
+                     child: Container(
+                      width: 200,
+                      height: 50,
+                      decoration: BoxDecoration(
+                        color:Color(0xFF204563),
+                     border: Border.all(),
+                     borderRadius: BorderRadius.circular(5),
+                      ),
+                        child: Center(child: Text('Login',style: TextStyle(color: Colors.white),))),
+                   ),
                  ),
         ]),
       ))],

@@ -16,7 +16,7 @@ class _organizernavState extends State<organizernav> {
   static const List<dynamic> _widgetoptions = [
     Orgassig(),
    Participantlist(),
-    Appeal(),
+    Appeal(), 
    
     
   ];

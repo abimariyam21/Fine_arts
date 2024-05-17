@@ -1,27 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Admin/Studentdetails.dart';
+import 'package:flutter_application_1/Admin/Organizor.dart';
+import 'package:flutter_application_1/Admin/Organizordetails.dart';
 
-class Students extends StatefulWidget {
-  const Students({Key? key}) : super(key: key);
+class Orglist extends StatefulWidget {
+  const Orglist({super.key});
 
   @override
-  State<Students> createState() => _StudentsState();
+  State<Orglist> createState() => _OrglistState();
 }
 
-class _StudentsState extends State<Students> {
-  int _currentIndex = 0; 
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _currentIndex = index;
-    });
-  }
-
+class _OrglistState extends State<Orglist> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Student List'),
+    return  Scaffold(
+       appBar: AppBar(
+        title: Text('Organizers List'),
          centerTitle: true,
       ),
       body: SingleChildScrollView(
@@ -34,11 +27,10 @@ class _StudentsState extends State<Students> {
               itemCount: 5,
               itemBuilder: (context, index) {
                 return InkWell(onTap:() {
-                     Navigator.push(context, MaterialPageRoute(builder: (context){return Stddetails();
+                     Navigator.push(context, MaterialPageRoute(builder: (context){return Organizor();
                      }));
                    },
                   child: Container(
-                    
                     decoration: BoxDecoration(color: Color.fromARGB(255, 247, 247, 247),border: Border.all(
                       color: Colors.black12
                     ),borderRadius: BorderRadius.circular(5)

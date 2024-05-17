@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_application_1/Admin/Addevents.dart';
 
 class Events extends StatefulWidget {
   const Events({super.key});
@@ -53,7 +54,12 @@ class _EventsState extends State<Events> {
           
         ),
       ),
-      floatingActionButton: FloatingActionButton(onPressed: (){},
+      floatingActionButton: FloatingActionButton(onPressed: (){
+      
+                     Navigator.push(context, MaterialPageRoute(builder: (context){return Addevents();
+      }));
+                   },
+    
       child: Icon(Icons.add),
       backgroundColor: Colors.amber,
       ),

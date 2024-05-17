@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Students/Result.dart';
+ import 'package:flutter_application_1/Students/Result.dart';
 import 'package:flutter_application_1/Students/Stdhome.dart';
 
 class stdNav extends StatefulWidget {

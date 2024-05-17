@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Admin/Events.dart';
-import 'package:flutter_application_1/Admin/Organizor.dart';
 import 'package:flutter_application_1/Admin/Students.dart';
+import 'package:flutter_application_1/Admin/orglist.dart';
 
 class Navigation extends StatefulWidget {
   const Navigation({super.key});
@@ -14,7 +14,7 @@ class _NavigationState extends State<Navigation> {
   int _selectedIndex = 0;
   static const List<dynamic> _widgetoptions = [
    Students (),
-    Organizor(),
+    Orglist(),
     Events(),
 
     
