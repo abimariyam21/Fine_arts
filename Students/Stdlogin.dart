@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Students/Stdhome.dart';
 
 class Stdlogin extends StatefulWidget {
   const Stdlogin({super.key});
@@ -62,15 +63,20 @@ Padding(
                  
                  Padding(
                    padding: const EdgeInsets.only(top: 50),
-                   child: Container(
-                    width: 200,
-                    height: 50,
-                    decoration: BoxDecoration(
-                      color:Color(0xFF204563),
-                   border: Border.all(),
-                   borderRadius: BorderRadius.circular(5),
-                    ),
-                      child: Center(child: Text('Login',style: TextStyle(color: Colors.white),))),
+                   child: InkWell(onTap:() {
+                     Navigator.push(context, MaterialPageRoute(builder: (context){return Stdhome();
+                     }));
+                   },
+                     child: Container(
+                      width: 200,
+                      height: 50,
+                      decoration: BoxDecoration(
+                        color:Color(0xFF204563),
+                     border: Border.all(),
+                     borderRadius: BorderRadius.circular(5),
+                      ),
+                        child: Center(child: Text('Login',style: TextStyle(color: Colors.white),))),
+                   ),
                  ),
         ]),
       ))],

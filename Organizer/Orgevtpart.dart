@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Students/Eventdetails.dart';
 
 class Orgevtoart extends StatefulWidget {
   const Orgevtoart({Key? key}) : super(key: key);
@@ -42,14 +43,19 @@ class _OrgevtoartState extends State<Orgevtoart> with SingleTickerProviderStateM
             shrinkWrap: true,
             itemCount: 2,
             itemBuilder: (context, index) {
-              return Container(
-                decoration: BoxDecoration(
-                  color: Color(0xFF558DBB),
-                  border: Border.all(color: Colors.white),
-                  borderRadius: BorderRadius.circular(3),
-                ),
-                child: ListTile(
-                  title: Center(child: Text('Mohiniyattam', style: TextStyle(color: Colors.white))),
+              return InkWell(onTap:() {
+                     Navigator.push(context, MaterialPageRoute(builder: (context){return stdEventDetail();
+                     }));
+                   },
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Color(0xFF558DBB),
+                    border: Border.all(color: Colors.white),
+                    borderRadius: BorderRadius.circular(3),
+                  ),
+                  child: ListTile(
+                    title: Center(child: Text('Mohiniyattam', style: TextStyle(color: Colors.white))),
+                  ),
                 ),
               );
             },
